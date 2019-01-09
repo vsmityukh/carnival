@@ -169,11 +169,38 @@ header
 .topInfo_blocks
   .shadow
     height: 123px
+  .topInfo_item
+    display: flex
+    align-items: center
+    justify-content: space-evenly
+    .topInfo_item-text
+      max-width: 150px
+      color: $text
+      font-size: 18px
+      font-weight: bold
 .top_categories
   .shadow
     height: 278px
     &:hover
       background-color: $orange
+
+
+//top categories
+.top_categories-item
+  background-repeat: no-repeat
+  background-position: right top
+  background-size: cover
+  padding: 42px 44px 32px
+  position: relative
+  p
+    font-weight: bold
+    font-size: 26px
+    line-height: 1.277
+  a
+    position: absolute
+    bottom: 32px
+    left: 44px
+
 
 //categories list
 .categories_list
