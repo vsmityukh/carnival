@@ -112,9 +112,149 @@ button:focus, button:active
 
 //header styles
 header
-  min-height: 186px
+  min-height: 156px
   background: #ffffff
   box-shadow: $box-shadow
+
+  .h-top_row
+    height: 38px  
+    border-bottom: 1px solid #F9F9F9
+    align-items: center
+    a
+      font-size: 14px
+      color: $text
+      font-weight: 300
+      & + a
+        margin-left: 60px
+  .h-middle_row
+    align-items: center
+    padding: 11px 0 14px
+    border-bottom: 1px solid $grey  
+    .title
+      font-size: 32px
+      font-weight: 400
+      line-height: 1
+    .h_phone
+      a
+        font-size: 16px
+        font-weight: bold
+        color: $text
+        display: block
+        text-align: center
+        line-height: 20px
+        margin-bottom: 2px
+      span
+        display: block
+        text-align: center
+        font-size: 12px
+        font-weight: 300
+        color: $green
+  .h_search
+    width: 100%
+    input
+      width: 100%
+      border: none
+      background-color: $grey
+      padding: 0 23px
+      color: $green
+      font-size: 12px
+      height: 40px
+
+  nav
+    ul.nav
+      margin-bottom: 0
+      padding-left: 0
+      list-style: none
+      display: flex
+      align-items: center
+      justify-content: space-between
+      li:not(.catalog)
+        display: block
+        a
+          color: $text
+          padding: 0
+        &:hover
+          &>a
+            background: none  
+            color: $green
+          &:hover,&:active,&:focus
+            background: none  
+            color: $green
+      li.catalog
+        &>a
+          background-color: $green
+          color: #fff
+          border-radius: 2px
+          padding-left: 26px
+          padding-right: 24px
+          position: relative
+          span
+            font-size: 12px
+            margin-right: 16px
+        &:hover
+          &>a
+            box-shadow: $box-shadow
+            background-color: #ffffff
+            color: $green
+        ul.dropdown
+          display: none
+          position: absolute
+          width: 377px
+          z-index: 100
+          background: #ffffff
+          box-shadow: $box-shadow
+          padding-left: 0
+          &>li:before
+            content: ""
+            background: url('../img/icons/icon-nav-arrow-right.svg')
+            width: 3px
+            height: 6px
+            display: inline-block
+            position: absolute
+            right: 45px
+            top: 26px
+            background-size: contain
+          li
+            height: 58px
+            padding: 0 37px
+            line-height: 58px
+            display: block
+            position: relative
+            a
+              width: 100%
+              display: block
+            & + li
+              border-top: 1px solid $grey
+
+
+
+      li.catalog:hover
+        &>ul.dropdown
+          display: block
+          li:hover
+            ul.dropdown
+              width: 640px
+              padding-left: 0
+              display: flex
+              flex-wrap: wrap
+              left: 100%
+              top: 0
+              height: auto
+              padding: 26px 42px 6px
+              background: #ffffff
+              box-shadow: $box-shadow
+              li
+                width: 50%
+                border-top: none
+                height: auto
+                margin-bottom: 20px
+                &:before
+                  content: none 
+                a
+                  line-height: 1
+
+      &:before, &:after
+        content: none
 
 
 //top slider styles
