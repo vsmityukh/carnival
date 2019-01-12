@@ -34,6 +34,8 @@ body
 
 .text-center
 	text-align: center
+.text-right
+  text-align: right
 
 b, strong
 	font-weight: bold
@@ -180,6 +182,7 @@ header
       display: flex
       align-items: center
       justify-content: space-between
+      height: 45px
       li:not(.catalog)
         display: block
         a
@@ -200,6 +203,9 @@ header
           padding-left: 26px
           padding-right: 24px
           position: relative
+          height: 45px
+          display: block
+          line-height: 45px
           span
             font-size: 12px
             margin-right: 16px
@@ -839,12 +845,427 @@ section.crumbs
       transform: rotate(0deg)
 
   .fiter_body
+    display: none
     .fiter_body-item
       padding: 16px 43px 22px
       border-top: 1px solid $grey
       border-bottom: 1px solid $grey
 
+main.product
+  margin-top: 15px
+  margin-bottom: 50px
+  .prod_img
+    height: 383px
+    display: flex
+    align-items: center
+    justify-content: center
+    img
+      max-width: 100%
+  .prod_imgThumb
+    margin-top: 20px
+    display: flex
+    a
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 100px
+      height: 100px
+      & + a
+        margin-left: 20px
 
+      img
+        max-width: 100%
+        max-height: 90px
+
+  .prod_info
+    border-top: 1px solid #C4C4C4
+    padding: 9px 0 14px
+
+    .prod_info-header
+      position: relative
+      display: flex
+      align-items: center
+      .title
+        cursor: pointer
+        font-size: 16px
+        color: $text
+        width: 100%
+      &:after
+        content: "";
+        background: url(../img/arrow-up.svg) no-repeat;
+        width: 12px
+        height: 6px
+        float: right
+        position: absolute
+        right: 0
+        display: inline-block
+      &.active:after
+        transform: rotate(180deg)
+
+    .prod_info-body
+      margin-top: 13px
+      display: flex
+      flex-wrap: wrap
+      div
+        & + div
+          margin-left: 12px
+        input
+          display: none
+          &:checked + label
+            background: $orange
+        label
+          width: 30px
+          height: 30px
+          color: $text
+          line-height: 30px
+          font-size: 18px
+          text-align: center
+          cursor: pointer
+          margin-bottom: 0
+      &.color
+        div
+          input:checked + label
+            box-shadow: $box-shadow
+      p
+        font-weight: 300
+        color: #4F4F4F
+        line-height: 23px
+        margin-bottom: 4px
+        width: 100%
+      a
+        text-decoration: underline
+        display: block
+        color: $text
+        font-weight: 300
+        &:hover
+          text-decoration: none
+
+  .prod_add
+    padding: 18px 22px
+
+    .prod_add-price
+      margin-top: 21px
+      .price
+        font-size: 30px
+        color: $text
+        font-weight: bold
+      .old-price
+        font-size: 22px
+        color: #E0E0E0
+        margin-left: 27px
+
+    .prod_add-btns
+      text-align: center
+      .a-btn
+        display: block
+        width: 100%
+        height: 44px
+        text-align: center
+        line-height: 30px
+        color: #ffffff
+        background: $green
+        margin-bottom: 14px
+        &:hover
+          color: $green
+          background: none
+      .fast-buy
+        color: #828282
+        text-decoration: underline
+        font-size: 14px
+        &:hover
+          text-decoration: none
+  
+  .prod_warranty
+    padding: 24px 29px
+    margin-top: 20px
+
+    .prod_warranty-item
+      display: flex
+      justify-content: space-evenly
+      align-items: center
+      & + .prod_warranty-item
+        margin-top: 36px
+
+      img
+        width: 51px
+      span
+        line-height: 18px
+        font-size: 14px
+        color: #352542
+        font-weight: bold
+        max-width: 115px
+  
+
+  .prod_tabInfo
+    margin-top: 50px
+    .nav-tabs
+      list-style: none
+      display: flex
+      justify-content: space-between
+      padding: 0 40px
+      height: 58px
+      align-items: center
+      li
+        display: inline-block
+        a
+          color: #9A9A9A
+          font-size: 16px
+        a.active
+          color: $text
+
+    .tab-content
+      padding: 28px 29px 31px 54px
+      .tab-pane
+        display: none
+        &.active
+          display: block
+        p
+          font-weight: 300
+          font-size: 14px
+      .char_wrapper
+        display: flex
+        table
+          & + table
+            margin-left: 155px
+          td
+            font-size: 14px
+            color: #4f4f4f
+            padding: 2px 10px
+            &:first-child
+              font-weight: bold
+
+main.basket
+  margin-top: 20px
+  margin-bottom: 50px
+  &.checkout
+    .basket_items 
+      .basket_item
+        min-height: 74px
+        & + .basket_item
+          margin-top: 0
+  .basket_top
+    height: 58px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 0 20px 0 24px
+    & ~ .basket_top
+      margin-top: 40px
+      margin-bottom: 20px
+    span
+      font-size: 18px
+      color: $text
+  
+  .basket_items
+    margin-top: 20px
+    .basket_item
+      min-height: 150px
+      padding: 14px 20px 9px 31px
+      display: flex
+      justify-content: space-between
+      & + .basket_item
+        margin-top: 20px
+
+      .basket_item-img
+        img
+          max-width: 94px
+      .basket_item-info
+        .top_info
+      .titl
+        color: #828282
+        font-size: 13px
+        display: block
+        margin-bottom: 2px
+        line-height: 16px
+      .value
+        color: $text
+        font-size: 16px
+        line-height: 20px
+        font-weight: bold
+
+
+      .basket_item-count
+        display: flex
+        .count
+          width: 108px
+          display: flex
+          margin-left: 13px
+          .crement
+            width: 33px
+            background: $grey
+            cursor: pointer
+            color: #828282
+          .val
+            width: 42px
+            color: $text
+          span
+            height: 35px
+            display: flex
+            align-items: center
+            justify-content: center
+            border: 1px solid #F9F9F9
+
+      .basket_item-remove
+        a
+          display: block
+          width: 37px
+          height: 37px
+          background: $grey
+          text-align: center
+          line-height: 37px
+
+  .basket_promo
+    margin-top: 20px
+    height: 85px
+    padding: 0 30px
+    display: flex
+    align-items: center
+
+    input
+      border: none
+      background: $grey
+      color: $green
+      margin-right: 30px
+      padding: 0 22px
+      height: 37px
+      font-size: 13px
+      &::placeholder
+        color: $green
+        font-size: 13px
+    button
+      background: none
+      height: 44px
+      width: 136px
+      font-size: 16px
+      cursor: pointer
+      &:hover
+        color: #ffffff
+        background: $green
+
+  .basket_total
+    padding: 18px 22px
+
+    .title
+      font-size: 16px
+      margin-bottom: 17px
+    .basket_total-info
+      display: flex
+      align-items: center
+      justify-content: space-between
+      span
+        color: #000000
+        font-size: 13px
+        &:last-child
+          font-size: 18px
+          font-weight: bold
+    .total
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin: 22px 0 20px
+      span
+        font-size: 16px
+        color: #000000
+        &.total_price
+          font-size: 26px
+          font-weight: bold
+    .basket_btns
+      .a-btn
+        width: 100%
+        display: block
+        text-align: center
+        border-radius: 2px
+        height: 44px
+        line-height: 32px
+        color: #ffffff
+        background: $green
+        margin-bottom: 14px
+        font-size: 16px
+        &:hover,&:focus
+          color: $green
+          background: #fff
+      .fast-buy
+        display: block
+        text-align: center
+        color: $text
+        text-decoration: underline
+        font-size: 14px
+        &:hover
+          text-decoration: none
+
+
+.basket_delivery
+  .basket_delivery-header
+    height: 45px
+    display: flex
+    color: #828282
+    font-size: 14px
+    align-items: center
+    padding: 0 0 0 24px
+    div
+      width: 70%
+      &:last-child
+        width: 30%
+
+  .basket_delivery-item
+    min-height: 52px
+    border-top: 1px solid #d9d9d9
+    padding: 12px 25px 17px
+    
+    .basket_delivery-item--header
+      display: flex
+      cursor: pointer
+      position: relative
+      &:after
+        content: ""
+        background: url(../img/arrow-up.svg) no-repeat;
+        width: 12px
+        height: 6px
+        float: right
+        transform: rotate(180deg)
+        position: absolute
+        right: 43px
+        top: 10px
+        display: inline-block
+      &.open:after
+        transform: rotate(0deg)
+        
+      div
+        position: relative
+        padding-left: 35px
+      div:first-child
+        width: 70%
+      
+      label 
+        font-size: 16px
+        color: $text
+        cursor: pointer
+        margin-bottom: 0
+        &:after
+          content: ""
+          width: 18px
+          height: 18px
+          position: absolute
+          display: block
+          left: 0
+          top: 2px
+          border: 1px solid #C4C4C4
+          border-radius: 2px
+      input
+        display: none
+        &:checked + label:after
+          background: #5CC142 url(../img/icons/checked.svg) no-repeat center
+          background-size: 85%
+          border-color: #5CC142
+      div:last-child
+        width: 30%
+
+    .basket_delivery-item--body
+      display: none
+      padding-left: 35px
+      margin-top: 9px
+      color: #4F4F4F
+      font-size: 14px
 
 
 @import "media" // Always at the end
