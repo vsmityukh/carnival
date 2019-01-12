@@ -38,5 +38,10 @@ function stendArrows(sliderClass){
 
 
 $(document).ready(function(){
-	stendArrows('.new_prod-slider'); 
+	stendArrows('.new_prod-slider');
+	
+	$('.filter_header').on('click', function(){
+		$(this).toggleClass('active')
+				.next().toggle()
+	})
 })

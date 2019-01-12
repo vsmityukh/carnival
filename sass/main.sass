@@ -43,6 +43,14 @@ a:hover, a:focus, a:active
 button:focus, button:active
   outline: none
 
+h1
+  &.titl
+    font-size: 36px
+    color: #000000
+    font-weight: bold
+    line-height: 45px
+    margin-top: 7px
+
 .title_row
 	h2
     color: $text
@@ -58,6 +66,7 @@ button:focus, button:active
   background: #ffffff
   &.block_grey
     background: #F9F9F9
+
 
 .shadow
   background: #FFFFFF
@@ -114,8 +123,11 @@ button:focus, button:active
 header
   min-height: 156px
   background: #ffffff
-  box-shadow: $box-shadow
-
+  .wrapper
+    box-shadow: $box-shadow
+    width: 100%
+    padding-bottom: 8px
+    margin-bottom: 8px
   .h-top_row
     height: 38px  
     border-bottom: 1px solid #F9F9F9
@@ -408,53 +420,66 @@ section.new_prod
   .new_prod-slider
     margin-top: 38px
 
-    .slider_item
-      height: 390px
-      padding: 26px 0 20px
-      margin: 10px 0
-
-      .slider_item-img
-        height: 228px
-        display: flex
-        align-items: center
-        justify-content: center
-
-      .slider_item-info
-        padding: 0 23px
-        margin-top: 21px
-        &>a
-          color: $text
-          font-size: 18px
-          line-height: 1.277
-          display: block
-          font-weight: bold
-          margin-bottom: 6px 
-        .raiting
-          display: flex
-          align-items: center
-          a
-            color: $orange
-            font-size: 14px
-            line-height: 1
-            margin-left: 17px
-            &:hover
-              text-decoration: underline 
-        .price
-          margin-top: 12px
-          display: flex
-          justify-content: space-between
-          align-items: center
-          span
-            font-weight: bold
-            font-size: 18px
-            line-height: 1.277
-      &:hover
-        .slider_item-info
-          &>a
-            color: $green
-
+    
     .fa-arrow-left, .fa-arrow-right
       color: $orange
+
+a.more
+  height: 58px
+  display: flex
+  justify-content: center
+  align-items: center
+  font-size: 18px
+  color: #000000
+  font-weight: bold
+  margin-top: 10px
+
+
+//short products cart
+.slider_item
+  height: 390px
+  padding: 26px 0 20px
+  margin: 10px 0
+
+  .slider_item-img
+    height: 228px
+    display: flex
+    align-items: center
+    justify-content: center
+
+  .slider_item-info
+    padding: 0 23px
+    margin-top: 21px
+    &>a
+      color: $text
+      font-size: 18px
+      line-height: 1.277
+      display: block
+      font-weight: bold
+      margin-bottom: 6px 
+    .raiting
+      display: flex
+      align-items: center
+      a
+        color: $orange
+        font-size: 14px
+        line-height: 1
+        margin-left: 17px
+        &:hover
+          text-decoration: underline 
+    .price
+      margin-top: 12px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      span
+        font-weight: bold
+        font-size: 18px
+        line-height: 1.277
+  &:hover
+    .slider_item-info
+      &>a
+        color: $green
 
 
 //advantages
@@ -596,8 +621,6 @@ section.news
           display: block
 
 
-
-
 //feedback
 section.feedback
   padding: 38px 0 62px
@@ -605,11 +628,223 @@ section.feedback
   .title_row
     h2
       color: #ffffff
+
+  .feedback_form
+    margin: 45px auto 0
+    max-width: 775px
+    width: 90%
+     
+    form.form
+      display: flex
+      align-items: center
+      justify-content: space-between
+      width: 100%
+      height: 59px
+      padding: 0 35px 0 28px
+      .form-group
+        margin-bottom: 0
+        span
+          font-size: 20px
+          position: relative
+          top: 4px
+        input
+          margin-bottom: 0
+          border: none
+          padding: 0 16px
+          font-size: 14px
+          color: $text
+        button
+          background: none
+          &:hover
+            background: $green
+      
     
 
 footer
   min-height: 346px
   background: #589F46
+  padding: 51px 0 33px
+  .title
+    font-size: 16px
+    color: #fff
+    line-height: 20px
+    margin-bottom: 14px
+  a
+    color: #fff
+    font-size: 14px
+    margin-bottom: 11px
+    font-weight: 300
+    display: block
+    &:hover
+      color: #ffffff
+      text-decoration: underline
+  .f_cat-nav
+    display: flex
+    flex-wrap: wrap
+    .title
+      width: 100%
+    a
+      width: 50%
+  .f_right
+    float: right
+    text-align: center
+    a.tel
+      display: block
+      margin-bottom: 4px
+      font-size: 24px
+      font-weight: bold
+      line-height: 30px
+    span
+      font-size: 15px
+      display: block
+      font-weight: 300
+      color: #fff
+
+    .f_social
+      margin-top: 57px
+      a
+        display: inline-block
+        width: 38px
+        height: 38px
+        border-radius: 50%
+        background: #ffffff
+        color: $green
+        text-align: center
+        i
+          line-height: 38px
+          font-size: 18px
+        & + a
+          margin-left: 28px
+
+  .f_bottom
+    margin-top: 70px
+    .title
+      font-family: "GillSans", sans-serif
+      font-size: 24px
+      color: #ffffff
+      display: inline-block
+    .subTitle
+      color: #ffffff
+      display: inline-block
+      font-weight: 300
+      font-size: 14px
+      margin-left: 44px
+
+    .f_copyright
+      p
+        margin-bottom: 0
+        text-align: right
+        color: #ffffff
+        font-weight: 300
+        font-size: 14px
+
+
+section.crumbs
+  background: $grey
+  &.inner
+    background: #fff
+  ul
+    list-style: none
+    margin-top: 10px
+    padding-left: 0
+    li
+      display: inline-block
+      a
+        color: #828282
+        font-size: 12px
+        &:after
+          content: ""
+          background: url('../img/icons/icon-next.svg') no-repeat
+          background-size: contain
+          width: 3px
+          height: 6px
+          display: inline-block
+          vertical-align: middle
+          margin: 0 9px
+      span
+        color: $text
+        font-size: 12px
+        
+
+
+.pag
+  list-style: none
+  padding-left: 0
+  margin-top: 20px
+  display: flex
+  justify-content: flex-end
+  li
+    display: inline-block
+    text-align: center
+    a
+      line-height: 34px
+      color: #9A9A9A
+      font-size: 14px
+      padding: 0
+      display: block
+      background: $grey
+      border: none
+      width: 34px
+      height: 34px
+    & + li
+      margin-left: 20px
+    &.current, &:hover
+      background: #ffffff
+      box-shadow: $box-shadow
+      a
+        background: #fff
+        color: #000000
+        font-weight: bold
+      span
+        color: #000000
+        display: block
+        font-weight: bold
+        width: 34px
+        height: 34px
+        line-height: 34px
+
+
+.sortBlock
+  margin-bottom: 7px
+  span, a
+    color: $text
+    font-size: 14px
+    line-height: 18px
+  a:hover
+    color: $green
+  a
+    margin-left: 47px
+
+.filter
+  .filter_header
+    font-size: 20px
+    color: $text
+    font-weight: bold
+    padding: 22px 43px
+    cursor: pointer
+    position: relative
+    display: flex
+    align-items: center
+    &:after
+      content: ""
+      background: url('../img/arrow-up.svg') no-repeat
+      width: 12px
+      height: 6px
+      float: right
+      position: absolute
+      right: 43px
+      transform: rotate(180deg)
+      display: inline-block
+    &.active:after
+      transform: rotate(0deg)
+
+  .fiter_body
+    .fiter_body-item
+      padding: 16px 43px 22px
+      border-top: 1px solid $grey
+      border-bottom: 1px solid $grey
+
+
 
 
 @import "media" // Always at the end
