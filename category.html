@@ -3,29 +3,30 @@
 
 <head>
 
-	<meta charset="utf-8">
-	<!-- <base href="/"> -->
+  <meta charset="utf-8">
+  <!-- <base href="/"> -->
 
-	<title>Carnival category</title>
-	<meta name="description" content="">
+  <title>Carnival category</title>
+  <meta name="description" content="">
 
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	
-	<!-- Template Basic Images Start -->
-	<meta property="og:image" content="path/to/image.jpg">
-	<link rel="icon" href="img/favicon/favicon.ico">
-	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
-	<!-- Template Basic Images End -->
-	
-	<!-- Custom Browsers Color Start -->
-	<meta name="theme-color" content="#000">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Template Basic Images Start -->
+  <meta property="og:image" content="path/to/image.jpg">
+  <link rel="icon" href="img/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+  <!-- Template Basic Images End -->
+
+  <!-- Custom Browsers Color Start -->
+  <meta name="theme-color" content="#000">
   <!-- Custom Browsers Color End -->
-  
-  <!-- FontAwesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
-	<link rel="stylesheet" href="css/main.min.css">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/main.min.css">
 
 </head>
 
@@ -35,7 +36,7 @@
   <header>
     <div class="wrapper">
       <div class="container">
-        
+
         <!-- /. header-top row -->
         <div class="row h-top_row">
           <div class="col-6 text-left">
@@ -97,7 +98,7 @@
                         <li><a href="#">Новогодний костюм</a></li>
                         <li><a href="#">Новогодний костюм</a></li>
                         <li><a href="#">Новогодний костюм</a></li>
-                      </ul> 
+                      </ul>
                     </li>
                     <li><a href="#">Карнавальные костюмы</a></li>
                     <li><a href="#">Маски</a></li>
@@ -126,7 +127,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          
+
           <ul class="crumbs">
             <li><a href="#">Главная</a></li>
             <li><a href="#">Каталог товаров</a></li>
@@ -155,7 +156,90 @@
 
             <div class="fiter_body">
               <div class="fiter_body-item">
-                  Some filters code...
+                <form id="eFiltr" class="eFiltr eFiltr_form" action="/novogodnie-kostyumy.html" method="get">
+                  <div class="eFiltr_cat eFiltr_cat0">
+                    <div class="fltr_block fltr_block_slider fltr_block6">
+                      <span class="fltr_name fltr_name_slider fltr_name6">Стоимость</span>
+                      <div class="fltr_inner fltr_inner_slider fltr_inner6">
+                        <div class="slider_text slider_text6">
+                          от <span class="minCost">8000</span>
+                          до <span class="maxCost">9600</span></div>
+                        <div class="fltr_slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+                          <div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 0%; width: 100%;"></div><span
+                            class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 0%;"></span><span
+                            class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 100%;"></span>
+                        </div>
+                        <div style="display:none;">
+                          от<input class="fltr_min" type="text" id="minCostInp6" name="f[6][min]" value="8000"
+                            data-min-val="8000">
+                          до<input class="fltr_max" type="text" id="maxCostInp6" name="f[6][max]" value="9600"
+                            data-max-val="9600">
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="fltr_block fltr_block_checkbox fltr_block26">
+                      <span class="fltr_name fltr_name_checkbox fltr_name26">Производитель</span>
+                      <div class="input_row">
+                        <div>
+                          <input type="checkbox" name="f[26][]" value="27" id="checkbox-27">
+                          <label for="checkbox-27" class="">Производитель 1</label></div>
+                        <div>
+                          <input type="checkbox" name="f[26][]" value="28" id="checkbox-28">
+                          <label for="checkbox-28" class="">Производитель 2</label></div>
+                          <div>
+                          <input type="checkbox" name="f[26][]" value="27" id="checkbox-27">
+                          <label for="checkbox-27" class="">Производитель 1</label></div>
+                        <div>
+                          <input type="checkbox" name="f[26][]" value="28" id="checkbox-28">
+                          <label for="checkbox-28" class="">Производитель 2</label></div>
+                          <div>
+                          <input type="checkbox" name="f[26][]" value="27" id="checkbox-27">
+                          <label for="checkbox-27" class="">Производитель 1</label></div>
+                        <div>
+                          <input type="checkbox" name="f[26][]" value="28" id="checkbox-28">
+                          <label for="checkbox-28" class="">Производитель 2</label></div>
+                      </div>
+                    </div>
+
+                    <div class="fltr_block fltr_block_checkbox fltr_block30">
+                      <span class="fltr_name fltr_name_checkbox fltr_name30">Цвет</span>
+                      <div class="input_row">
+                        <div>
+                          <input type="checkbox" name="f[30][]" value="32" id="checkbox-32">
+                          <label for="checkbox-32" class="">Красный</label></div>
+                        <div>
+                          <input type="checkbox" name="f[30][]" value="33" id="checkbox-33">
+                          <label for="checkbox-33" class="">Желтый</label></div>
+                        <div>
+                          <input type="checkbox" name="f[30][]" value="35" id="checkbox-35">
+                          <label for="checkbox-35" class="">Черный</label></div>
+                      </div>
+                    </div>
+
+                    <div class="fltr_block fltr_block_checkbox fltr_block29">
+                      <span class="fltr_name fltr_name_checkbox fltr_name29">Пол</span>
+                      <div class="input_row">
+                        <div>
+                          <input type="checkbox" name="f[29][]" value="1" id="checkbox-1">
+                          <label for="checkbox-1" class="">Женский</label></div>
+                      </div>
+                    </div>
+
+                    <div class="fltr_block fltr_block_checkbox fltr_block32">
+                      <span class="fltr_name fltr_name_checkbox fltr_name32">Тематика</span>
+                      <div class="input_row">
+                        <div>
+                          <input type="checkbox" name="f[32][]" value="38" id="checkbox-38">
+                          <label for="checkbox-38" class="">Новый год</label></div>
+                        <div>
+                          <input type="checkbox" name="f[32][]" value="39" id="checkbox-39">
+                          <label for="checkbox-39" class="">Пираты</label></div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -163,7 +247,7 @@
 
         <!-- products -->
         <div class="col-lg-9">
-          
+
           <div class="sortBlock">
             <span>Сортировать по:</span>
             <a href="#">цена</a>
@@ -376,7 +460,7 @@
             <div class="title">Преимущество <br> магазина</div>
           </div>
         </div><!-- /. advantage item -->
-        
+
         <!-- advantage item -->
         <div class="col-12 col-md-6 col-xl-3">
           <div class="shadow">
@@ -391,7 +475,11 @@
 
       <div class="row">
         <div class="col-12 block_text">
-          <p>Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации дальнейших направлений развития. Равным образом укрепление и развитие структуры представляет собой интересный эксперимент проверки форм развития. Равным образом начало повседневной работы по формированию позиции представляет собой интересный эксперимент проверки дальнейших направлений развития. С другой стороны с широким активом в значительной степени обуславливает создание форм развития.</p>
+          <p>Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и
+            реализации дальнейших направлений развития. Равным образом укрепление и развитие структуры представляет
+            собой интересный эксперимент проверки форм развития. Равным образом начало повседневной работы по
+            формированию позиции представляет собой интересный эксперимент проверки дальнейших направлений развития. С
+            другой стороны с широким активом в значительной степени обуславливает создание форм развития.</p>
         </div>
 
         <div class="col-12">
@@ -441,49 +529,49 @@
         </div>
 
         <div class="col-12 col-md-12 col-lg-5">
-            <!-- short item -->
-            <div class="news_short-item">
-              <div class="news_date">
-                20 <span>нояб</span>
-              </div>
-              <div class="news_info">
-                <a href="#">Название новости</a>
-                <span>Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности</span>
-              </div>
-            </div><!-- /. short item -->
+          <!-- short item -->
+          <div class="news_short-item">
+            <div class="news_date">
+              20 <span>нояб</span>
+            </div>
+            <div class="news_info">
+              <a href="#">Название новости</a>
+              <span>Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности</span>
+            </div>
+          </div><!-- /. short item -->
 
-            <!-- short item -->
-            <div class="news_short-item">
-              <div class="news_date">
-                17 <span>нояб</span>
-              </div>
-              <div class="news_info">
-                <a href="#">Название новости</a>
-                <span>Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности</span>
-              </div>
-            </div><!-- /. short item -->
+          <!-- short item -->
+          <div class="news_short-item">
+            <div class="news_date">
+              17 <span>нояб</span>
+            </div>
+            <div class="news_info">
+              <a href="#">Название новости</a>
+              <span>Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности</span>
+            </div>
+          </div><!-- /. short item -->
 
-            <!-- short item -->
-            <div class="news_short-item">
-              <div class="news_date">
-                3 <span>нояб</span>
-              </div>
-              <div class="news_info">
-                <a href="#">Название новости</a>
-                <span>Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности</span>
-              </div>
-            </div><!-- /. short item -->
+          <!-- short item -->
+          <div class="news_short-item">
+            <div class="news_date">
+              3 <span>нояб</span>
+            </div>
+            <div class="news_info">
+              <a href="#">Название новости</a>
+              <span>Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности</span>
+            </div>
+          </div><!-- /. short item -->
 
-            <!-- short item -->
-            <div class="news_short-item">
-              <div class="news_date">
-                31 <span>окт</span>
-              </div>
-              <div class="news_info">
-                <a href="#">Название новости</a>
-                <span>Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности</span>
-              </div>
-            </div><!-- /. short item -->
+          <!-- short item -->
+          <div class="news_short-item">
+            <div class="news_date">
+              31 <span>окт</span>
+            </div>
+            <div class="news_info">
+              <a href="#">Название новости</a>
+              <span>Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности</span>
+            </div>
+          </div><!-- /. short item -->
         </div>
       </div>
     </div>
@@ -510,7 +598,7 @@
               <span class="icon-icon-f_phone"></span>
               <input type="text" name="phone" id="phone" placeholder="Ваш номер телефона">
             </div>
-  
+
             <div class="form-group">
               <button class="a-btn">Перезвонить мне</button>
             </div>
@@ -553,7 +641,7 @@
           <div class="f_right">
             <a href="tel:+7(495)2222222" class="tel">+7 (495) 222 22 22</a>
             <span>Ежедневно: 8:00 - 18:00</span>
-            
+
             <div class="f_social">
               <a href="#"><i class="fab fa-instagram"></i></a>
               <a href="#"><i class="fab fa-facebook-square"></i></a>
@@ -576,7 +664,8 @@
     </div>
   </footer>
 
-	<script src="js/scripts.min.js"></script>
+  <script src="js/scripts.min.js"></script>
 
 </body>
+
 </html>
