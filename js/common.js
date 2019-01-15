@@ -104,4 +104,14 @@ $(document).ready(function(){
 		ev.preventDefault();
 	});
 
+
+	//формы входа-регистрации-восстановления пароля
+
+	$(document).on('click', '.modalForm-btn a.btn-u', function(e){
+		e.preventDefault();
+		var href = $(this).attr('href');
+		$.fancybox.close();
+		$.fancybox.open($(href));
+	})
+
 })
